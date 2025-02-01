@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link id="theme-style" rel="stylesheet" href="./light.css">
+</head>
+<body>
+    <!-- Make the theme-toggle-container a button -->
+    <button class="theme-toggle-container" id="theme-toggle-btn">
+        <img id="theme-toggle" src="./lightdark.png" alt="Toggle Theme" style="width: 25px; height: 25px;">
+        <p class="theme-text">Light/Dark Mode</p>
+    </button>
+    
+    <h1>Tic Tac Toe</h1>
+    
+    <!-- The Game Container (will hide when game ends) -->
+    <div class="container" id="game-container">
+        <div class="board">
+            <div class="cell" id="cell-0"></div>
+            <div class="cell" id="cell-1"></div>
+            <div class="cell" id="cell-2"></div>
+            <div class="cell" id="cell-3"></div>
+            <div class="cell" id="cell-4"></div>
+            <div class="cell" id="cell-5"></div>
+            <div class="cell" id="cell-6"></div>
+            <div class="cell" id="cell-7"></div>
+            <div class="cell" id="cell-8"></div>
+        </div>
+        <button id="reset">Reset Game</button>
+    </div>
+    
+    <!-- Winner Message Box (hidden by default) -->
+    <div id="winner-box" class="winner-box">
+        <p id="winner-message"></p>
+        <button id="new-game">New Game</button>
+    </div>    
+
+    <script src="./script.js"></script>
+</body>
+</html>

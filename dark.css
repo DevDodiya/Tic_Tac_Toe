@@ -1,0 +1,260 @@
+/* Dark Mode Styles with Darker Gradient of Black, Light Grey, White, and Blue */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #000000 20%, #333333 50%, #666666 80%); /* Black to Dark Grey to Light Grey Gradient */
+    color: #e0e0e0; /* Light Grey Text */
+    transition: background 0.3s ease, color 0.3s ease;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.theme-toggle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.theme-toggle-container img {
+    margin-bottom: 5px;
+}
+
+.theme-text {
+    font-size: 14px;
+    font-weight: 500;
+    color: #e0e0e0;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.theme-toggle-container:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    font-size: 50px; /* Slightly smaller */
+    margin-bottom: 30px;
+    color: #ffffff; /* White Text */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    font-weight: 700;
+}
+
+.container {
+    max-width: 600px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.7);
+    background: radial-gradient(circle, #000000 30%, #808080 50%, #ffffff 80%); /* Black to Grey to White Gradient */
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+    gap: 15px;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.cell {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(to bottom right, #2c3e50, #34495e); /* Dark Blue Gradient */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.cell:hover {
+    background: linear-gradient(to bottom right, #34495e, #1abc9c); /* Darker Blue to Teal on Hover */
+    transform: scale(1.05);
+}
+
+#reset {
+    margin-top: 30px;
+    padding: 15px 30px;
+    font-size: 22px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(to right, #1abc9c, #16a085); /* Teal to Darker Teal */
+    color: white;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+#reset:hover {
+    background: linear-gradient(to right, #16a085, #1e8e80); /* Darker Teal */
+    transform: scale(1.05);
+}
+
+/* Winner Box Styling for Dark Mode with Lighter Background */
+.winner-box {
+    display: none; /* Hidden by default */
+    text-align: center;
+    padding: 50px;
+    background: rgba(50, 50, 50, 0.85); /* Lighter Dark Background */
+    color: #ffffff; /* White Text */
+    border-radius: 10px;
+    width: 300px;
+    margin: 20px auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.winner-box p {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.winner-box button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #ff7043; /* Coral Red */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.winner-box button:hover {
+    background-color: #f44336; /* Darker Red */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 880px) {
+    .board {
+        grid-template-columns: repeat(3, 110px);
+        grid-template-rows: repeat(3, 110px);
+        gap: 8px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .container {
+        padding: 20px;
+        max-width: 360px;
+    }
+
+    .cell {
+        width: 110px;
+        height: 110px;
+        font-size: 48px;
+    }
+
+    #reset {
+        padding: 12px 24px;
+        font-size: 20px;
+    }
+
+    /* Increased theme toggle size */
+    #theme-toggle {
+        width: 120px;
+        height: 120px;
+    }
+
+    .winner-box {
+        width: 280px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 680px) {
+    .board {
+        grid-template-columns: repeat(3, 120px);
+        grid-template-rows: repeat(3, 120px);
+        gap: 10px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .cell {
+        width: 120px;
+        height: 120px;
+        font-size: 50px;
+    }
+
+    #reset {
+        padding: 12px 24px;
+        font-size: 18px;
+    }
+
+    .theme-text {
+        font-size: 12px;
+    }
+
+    /* Increased theme toggle size */
+    #theme-toggle {
+        width: 130px;
+        height: 130px;
+    }
+
+    .winner-box {
+        width: 250px;
+    }
+}
+
+/* Smaller Mobile Devices (Portrait Mode) */
+@media (max-width: 480px) {
+    .board {
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: repeat(3, 100px);
+        gap: 8px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .cell {
+        width: 100px;
+        height: 100px;
+        font-size: 40px;
+    }
+
+    #reset {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .winner-box {
+        width: 200px;
+    }
+
+    /* Further increased theme toggle size */
+    #theme-toggle {
+        width: 140px;
+        height: 140px;
+    }
+}
