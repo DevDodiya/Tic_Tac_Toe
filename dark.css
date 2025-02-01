@@ -145,45 +145,6 @@ h1 {
 }
 
 /* Mobile Responsiveness */
-@media (max-width: 880px) {
-    .board {
-        grid-template-columns: repeat(3, 110px);
-        grid-template-rows: repeat(3, 110px);
-        gap: 8px;
-    }
-
-    h1 {
-        font-size: 32px;
-    }
-
-    .container {
-        padding: 20px;
-        max-width: 360px;
-    }
-
-    .cell {
-        width: 110px;
-        height: 110px;
-        font-size: 48px;
-    }
-
-    #reset {
-        padding: 12px 24px;
-        font-size: 20px;
-    }
-
-    /* Increased theme toggle size */
-    #theme-toggle {
-        width: 120px;
-        height: 120px;
-    }
-
-    .winner-box {
-        width: 280px;
-        font-size: 18px;
-    }
-}
-
 @media (max-width: 680px) {
     .board {
         grid-template-columns: repeat(3, 120px);

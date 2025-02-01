@@ -147,47 +147,42 @@ h1 {
 /* Mobile Responsiveness */
 @media (max-width: 680px) {
     .board {
-        grid-template-columns: repeat(3, 110px);
-        grid-template-rows: repeat(3, 110px);
-        gap: 8px;
+        grid-template-columns: repeat(3, 120px);
+        grid-template-rows: repeat(3, 120px);
+        gap: 10px;
     }
 
     h1 {
-        font-size: 32px;
+        font-size: 30px;
     }
 
     .container {
         padding: 20px;
-        max-width: 360px;
     }
 
     .cell {
-        width: 110px;
-        height: 110px;
-        font-size: 48px;
+        width: 120px;
+        height: 120px;
+        font-size: 50px;
     }
 
     #reset {
         padding: 12px 24px;
-        font-size: 20px;
-    }
-
-    /* Increased theme toggle button size */
-    .theme-toggle-container {
-        width: 160px;
-        height: 60px;
         font-size: 18px;
     }
 
-    /* Increased theme toggle image size */
+    .theme-text {
+        font-size: 12px;
+    }
+
+    /* Increased theme toggle size */
     #theme-toggle {
-        width: 35px;
-        height: 35px;
+        width: 130px;
+        height: 130px;
     }
 
     .winner-box {
-        width: 280px;
-        font-size: 18px;
+        width: 250px;
     }
 }
 
@@ -218,16 +213,9 @@ h1 {
         width: 200px;
     }
 
-    /* Increased theme toggle button size */
-    .theme-toggle-container {
-        width: 160px;
-        height: 60px;
-        font-size: 18px;
-    }
-
-    /* Increased theme toggle image size */
+    /* Further increased theme toggle size */
     #theme-toggle {
-        width: 35px;
-        height: 35px;
+        width: 140px;
+        height: 140px;
     }
 }
